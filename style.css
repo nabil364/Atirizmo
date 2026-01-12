@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #fafafa;
+}
+
+/* HEADER */
+.top {
+  background: linear-gradient(45deg,#fd1d1d,#fcb045);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* PRODUCTS GRID */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
+  gap: 15px;
+  padding: 15px;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 10px;
+  text-align: center;
+}
+
+.card-body h2 {
+  font-size: 16px;
+}
+
+.price {
+  color: #fd1d1d;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 15px;
+  font-size: 14px;
+}
+
+/* POPUP */
+input {
+  display: none;
+}
+
+.popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  z-index: 100;
+}
+
+.popup img {
+  width: 90%;
+  max-width: 350px;
+  border-radius: 15px;
+}
+
+.popup h2 {
+  color: white;
+  margin-top: 10px;
+}
+
+.popup p {
+  color: #ddd;
+  text-align: center;
+  margin: 10px;
+}
+
+.popup h3 {
+  color: #fcb045;
+}
+
+.insta, .wa {
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  margin-top: 10px;
+  color: white;
+}
+
+.insta {
+  background: #fd1d1d;
+}
+
+.wa {
+  background: #25D366;
+}
+
+.close {
+  color: white;
+  font-size: 25px;
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  cursor: pointer;
+}
+
+/* SHOW POPUP */
+#p1:checked ~ .popup,
+#p2:checked ~ .popup {
+  display: flex;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 15px;
+  color: #777;
+}
